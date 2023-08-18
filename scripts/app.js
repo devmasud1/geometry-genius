@@ -1,7 +1,7 @@
 function calculateTriangle() {
   const triangleBase = getInput("triangle-base");
   const triangleheight = getInput("triangle-height");
-  if (isNaN(triangleBase || triangleheight)) {
+  if (isNaN(triangleBase && triangleheight)) {
     alert("Please insert a number");
     return;
   }
@@ -13,19 +13,23 @@ function calculateTriangle() {
 function calculateRectangle() {
   const rectangleWidth = getInput("rectangle-width");
   const rectanglelength = getInput("rectangle-length");
-  if (isNaN(rectangleWidth || rectanglelength)) {
+
+  if (isNaN(rectangleWidth && rectanglelength)) {
     alert("Please insert a number");
     return;
   }
-  const rectangleArea = rectangleWidth * rectanglelength;
-  areaInput("rectangle-area", rectangleArea);
-  calculationDetails("Rectangle", rectangleArea);
+  else{
+    const rectangleArea = rectangleWidth * rectanglelength;
+    areaInput("rectangle-area", rectangleArea);
+    calculationDetails("Rectangle", rectangleArea);
+  }
+ 
 }
 
 function calculateParallelogram() {
   const parallelogramBase = getInput("parallelogram-base");
   const parallelogramHeight = getInput("parallelogram-height");
-  if (isNaN(parallelogramBase || parallelogramHeight)) {
+  if (isNaN(parallelogramBase && parallelogramHeight)) {
     alert("Please insert a number");
     return;
   }
@@ -37,7 +41,7 @@ function calculateParallelogram() {
 function calculateRhombus() {
   const rhombusWidth = getInput("rhombus-width");
   const rhombusHeight = getInput("rhombus-height");
-  if (isNaN(rhombusWidth || rhombusHeight)) {
+  if (isNaN(rhombusWidth && rhombusHeight)) {
     alert("Please insert a number");
     return;
   }
@@ -49,7 +53,7 @@ function calculateRhombus() {
 function calculatePentagon() {
   const pentagonWidth = getInput("pentagon-width");
   const pentagonHeight = getInput("pentagon-height");
-  if (isNaN(pentagonWidth || pentagonHeight)) {
+  if (isNaN(pentagonWidth && pentagonHeight)) {
     alert("Please insert a number");
     return;
   }
@@ -61,7 +65,7 @@ function calculatePentagon() {
 function calculatEellipse() {
   const ellipseWidth = getInput("ellipse-width");
   const ellipseHeight = getInput("ellipse-height");
-  if (isNaN(ellipseWidth || ellipseHeight)) {
+  if (isNaN(ellipseWidth && ellipseHeight)) {
     alert("Please insert a number");
     return;
   }
